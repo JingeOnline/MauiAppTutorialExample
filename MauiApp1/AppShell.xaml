@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp1"
+    xmlns:views="clr-namespace:MauiApp1.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!--生成一个类似于Tab的布局-->
+    <TabBar>
+        <!--每个<ShellContent>对象都指向要显示的页面。-->
+        <ShellContent
+        Title="Notes"
+        ContentTemplate="{DataTemplate views:AllNotePage}"
+        Icon="icon_notes" />
+
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate views:AboutPage}"
+            Icon="icon_about" />
+    </TabBar>
+
+</Shell>
