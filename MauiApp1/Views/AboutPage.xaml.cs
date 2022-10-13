@@ -1,4 +1,4 @@
-namespace MauiApp1.Views;
+﻿namespace MauiApp1.Views;
 
 public partial class AboutPage : ContentPage
 {
@@ -9,10 +9,9 @@ public partial class AboutPage : ContentPage
 
 	private async void LearnMore_Clicked(object sender, EventArgs e)
 	{
-        // Navigate to the specified URL in the system browser.
+        // 使用系统自带的浏览器，打开该网址链接
         if (BindingContext is Models.About about)
         {
-            // Navigate to the specified URL in the system browser.
             await Launcher.Default.OpenAsync(about.MoreInfoUrl);
         }
     }

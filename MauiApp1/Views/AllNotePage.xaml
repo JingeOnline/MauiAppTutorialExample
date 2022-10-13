@@ -3,24 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.AllNotePage"
              Title="My Notes">
-    <!-- Add an item to the toolbar -->
+    
+    <!-- 在Content页面Toolbar中添加一个按钮 -->
     <ContentPage.ToolbarItems>
+        <!--添加了一个图标，此处使用了新的语法 IconImageSource-->
         <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="{FontImage Glyph='+', Color=White, Size=22}" />
     </ContentPage.ToolbarItems>
 
-    <!-- Display notes in a list -->
+    <!-- 使用一个CollectionView来显示一个集合，绑定源是后台的ObservableCollection对象 -->
     <CollectionView x:Name="Notes_CollectionView"
-                        ItemsSource="{Binding Notes}"
+                        ItemsSource="{Binding NotesCollection}"
                         Margin="20"
                         SelectionMode="Single"
                         SelectionChanged="notesCollection_SelectionChanged">
 
-        <!-- Designate how the collection of items are laid out -->
+        <!-- 指定，该集合中的元素如何布局，此处使用了从上到下的线性布局。-->
         <CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
         </CollectionView.ItemsLayout>
 
-        <!-- Define the appearance of each item in the list -->
+        <!-- 定义集合中的每个元素，如何显示 -->
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>

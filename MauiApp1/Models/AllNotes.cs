@@ -9,14 +9,16 @@ namespace MauiApp1.Models
 {
     internal class AllNotes
     {
-        public ObservableCollection<Note> Notes { get; set; } = new ObservableCollection<Note>();
+        public ObservableCollection<Note> NotesCollection { get; set; } = new ObservableCollection<Note>();
 
-        public AllNotes() =>
+        public AllNotes()
+        {
             LoadNotes();
+        }
 
         public void LoadNotes()
         {
-            Notes.Clear();
+            NotesCollection.Clear();
 
             // Get the folder where the notes are stored.
             string appDataPath = FileSystem.AppDataDirectory;
@@ -40,7 +42,7 @@ namespace MauiApp1.Models
 
             // Add each note into the ObservableCollection
             foreach (Note note in notes)
-                Notes.Add(note);
+                NotesCollection.Add(note);
         }
     }
 }

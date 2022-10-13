@@ -10,6 +10,7 @@
                 Text="{Binding Text}"
                 HeightRequest="100" />
 
+        <!--这里Gird使用新的语法定义了两个列，所以内部的两个按钮水平排列-->
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button Text="Save"
                     Clicked="SaveButton_Clicked" />

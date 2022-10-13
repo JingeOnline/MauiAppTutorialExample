@@ -9,6 +9,7 @@
 
     <!--生成一个类似于Tab的布局-->
     <TabBar>
+        
         <!--每个<ShellContent>对象都指向要显示的页面。-->
         <ShellContent
         Title="Notes"

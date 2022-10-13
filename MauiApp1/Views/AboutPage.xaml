@@ -4,7 +4,9 @@
              x:Class="MauiApp1.Views.AboutPage"
              xmlns:models="clr-namespace:MauiApp1.Models"
              Title="About">
+    <!--设置页面的DataContext-->
     <ContentPage.BindingContext>
+        <!--这里相当于新建了一个About的实例，About的属性值已经提前写在了About类中。所以下面，binding属性的时候，直接就能获取到值-->
         <models:About />
     </ContentPage.BindingContext>
 
